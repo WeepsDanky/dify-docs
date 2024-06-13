@@ -107,6 +107,9 @@
 ## Learn More
 
 * [Use Cases](learn-more/use-cases/README.md)
+  * [Build an Notion AI Assistant](learn-more/use-cases/build-an-notion-ai-assistant.md)
+  * [Create a MidJourney Prompt Bot with Dify](learn-more/use-cases/create-a-midjourney-prompt-bot-with-dify.md)
+  * [Create an AI Chatbot with Business Data in Minutes](learn-more/use-cases/create-an-ai-chatbot-with-business-data-in-minutes.md)
 * [Extended Reading](learn-more/extended-reading/README.md)
   * [What is LLMOps?](learn-more/extended-reading/what-is-llmops.md)
   * [Retrieval-Augmented Generation (RAG)](learn-more/extended-reading/retrieval-augment/README.md)
