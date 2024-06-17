@@ -1,12 +1,26 @@
 # Tools
 
-Within a workflow, Dify provides both built-in and customizable tools. Before utilizing these tools, you need to "authorize" them. If the built-in tools do not meet your requirements, you can create custom tools within "Dify—Tools".
+### Definition
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+The workflow provides a rich selection of tools, categorized into three types:
+
+* **Built-in Tools**: Tools provided by Dify.
+* **Custom Tools**: Tools imported or configured via the OpenAPI/Swagger standard format.
+* **Workflows**: Workflows that have been published as tools.
+
+Before using built-in tools, you may need to **authorize** the tools.
+
+If built-in tools do not meet your needs, you can create custom tools in the **Dify menu navigation -- Tools** section.
+
+You can also orchestrate a more complex workflow and publish it as a tool.
+
+<figure><img src="../../../.gitbook/assets/image (231).png" alt="" width="258"><figcaption><p>Tool Selection</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/image (232).png" alt=""><figcaption><p>Configuring Google Search Tool to Retrieve External Knowledge</p></figcaption></figure>
 
 Configuring a tool node generally involves two steps:
 
-1. **Authorizing the Tool/Creating Custom Tools**
-2. **Configuring Tool Inputs and Parameters**
+1. Authorizing the tool/creating a custom tool/publishing a workflow as a tool.
+2. Configuring the tool's input and parameters.
 
-For guidance on creating custom tools and configuring them, please refer to the [tool configuration instructions](https://docs.dify.ai/tutorials/quick-tool-integration).
+For more information on how to create custom tools and configure them, please refer to the [Tool Configuration Guide](https://docs.dify.ai/v/zh-hans/guides/tools).

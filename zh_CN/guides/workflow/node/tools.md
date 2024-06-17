@@ -24,6 +24,3 @@
 2. 配置工具输入和参数
 
 如何创建自定义工具和配置工具请参考[工具配置说明](https://docs.dify.ai/v/zh-hans/guides/tools)。
-
-
-

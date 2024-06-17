@@ -1,7 +1,28 @@
 # HTTP Request
 
-HTTP Request node lets you craft and dispatch HTTP requests to specified endpoints, enabling a wide range of integrations and data exchanges with external services. The node supports all common HTTP request methods, and lets you fully customize over the URL, headers, query parameters, body content, and authorization details of the request.
+### 1 Definition
 
-<figure><img src="../../../.gitbook/assets/06f7c6ba-fbe0-4aeb-b7d4-fa1df0b07a5e.png" alt="" width="375"><figcaption></figcaption></figure>
+Allows sending server requests via the HTTP protocol, suitable for scenarios such as retrieving external data, webhooks, generating images, and downloading files. It enables you to send customized HTTP requests to specified web addresses, achieving interconnectivity with various external services.
 
-A really handy feature with HTTP request is the ability to dynamically construct the request by inserting variables in different fields. For instance, in a customer support scenario, variables such as username or customer ID can be used to personalize automated responses sent via a POST request, or retrieve individual-specific information related to the customer.The HTTP request returns `body`, `status_code`, `headers`, and `files` as outputs. If the response includes files of [MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics\_of\_HTTP/MIME\_types/Common\_types) types (currently limited to images), the node automatically saves these as `files` for downstream use.
+This node supports common HTTP request methods:
+
+* **GET**: Used to request the server to send a specific resource.
+* **POST**: Used to submit data to the server, typically for submitting forms or uploading files.
+* **HEAD**: Similar to GET requests, but the server only returns the response headers without the resource body.
+* **PATCH**: Used to apply partial modifications to a resource.
+* **PUT**: Used to upload resources to the server, typically for updating an existing resource or creating a new one.
+* **DELETE**: Used to request the server to delete a specified resource.
+
+You can configure various aspects of the HTTP request, including URL, request headers, query parameters, request body content, and authentication information.
+
+<figure><img src="../../../.gitbook/assets/image (2).png" alt="" width="332"><figcaption><p>HTTP Request Configuration</p></figcaption></figure>
+
+***
+
+### 2 Scenarios
+
+One practical feature of this node is the ability to dynamically insert variables into different parts of the request based on the scenario. For example, when handling customer feedback requests, you can embed variables such as username or customer ID, feedback content, etc., into the request to customize automated reply messages or fetch specific customer information and send related resources to a designated server.
+
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Customer Feedback Classification</p></figcaption></figure>
+
+The return values of an HTTP request include the response body, status code, response headers, and files. Notably, if the response contains a file (currently only image types are supported), this node can automatically save the file for use in subsequent steps of the workflow. This design not only improves processing efficiency but also makes handling responses with files straightforward and direct.
