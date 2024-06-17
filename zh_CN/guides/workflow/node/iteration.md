@@ -138,7 +138,7 @@
 
 **使用代码节点转换**
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt="" width="334"><figcaption><p>代码节点转换</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="334"><figcaption><p>代码节点转换</p></figcaption></figure>
 
 ```python
 def main(articleSections: list):

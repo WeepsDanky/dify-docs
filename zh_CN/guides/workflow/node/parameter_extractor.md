@@ -20,7 +20,7 @@ Dify 工作流内提供了丰富的[工具](../../gong-ju.md)选择，其中大�
 
 2. **将文本转换为结构化数据**，如长故事迭代生成应用中，作为[迭代节点](iteration.md)的前置步骤，将文本格式的章节内容转换为数组格式，方便迭代节点进行多轮生成处理。
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 3. **提取结构化数据并使用** [**HTTP 请求**](http\_request.md) ，可请求任意可访问的 URL ，适用于获取外部检索结果、webhook、生成图片等情景。
 

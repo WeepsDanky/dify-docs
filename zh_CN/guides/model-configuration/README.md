@@ -1,6 +1,6 @@
 # 模型
 
-Dify 是基于大语言模型的 AI 应用开发平台，初次使用时你需要先在 Dify 的 「设置 > 模型供应商」 页面内添加并配置所需要的模型。
+Dify 是基于大语言模型的 AI 应用开发平台，初次使用时你需要先在 Dify 的 **设置 -- 模型供应商** 页面内添加并配置所需要的模型。
 
 <figure><img src="../../.gitbook/assets/image (165).png" alt=""><figcaption><p>设置-模型供应商</p></figcaption></figure>
 
