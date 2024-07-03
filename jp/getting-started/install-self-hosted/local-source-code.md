@@ -32,14 +32,20 @@ docker compose -f docker-compose.middleware.yaml up -d
 
 #### 基本環境インストール
 
-サービスを起動するにはPython 3.10.xが必要です。Python環境を迅速にインストールするには[Anaconda](https://docs.anaconda.com/free/anaconda/install/)を使用することをお勧めします。これはpipパッケージ管理ツールも含んでいます。
+サーバーの起動にはPython 3.10.xが必要です。Python環境の迅速なインストールには[pyenv](https://github.com/pyenv/pyenv)を使用することをお勧めします。
+
+追加のPythonバージョンをインストールするには、pyenv installを使用します。
 
 ```Bash
-# difyと名付けたPython 3.10環境を作成
-conda create --name dify python=3.10
-# dify Python環境に切り替え
-conda activate dify
+pyenv install 3.10
 ```
+
+"3.10" の Python 環境に切り替えるには、次のコマンドを使用します。
+
+```Bash
+pyenv global 3.10
+```
+
 
 #### 起動手順
 
@@ -61,14 +67,18 @@ conda activate dify
     ```
 4.  依存関係をインストール
 
+    Dify APIサービスは依存関係を管理するために[Poetry](https://python-poetry.org/docs/)を使用します。環境を有効にするには、`poetry shell`を実行できます。
+
     ```
-    pip install -r requirements.txt
+    poetry env use 3.10
+    poetry install
     ```
 5.  データベース移行を実行
 
     データベーススキーマを最新バージョンに更新します。
 
     ```
+    poetry shell
     flask db upgrade
     ```
 6.  APIサービスを開始
@@ -94,13 +104,13 @@ conda activate dify
     データセットファイルのインポートやデータセットドキュメントの更新などの非同期操作を消費するためのサービスです。Linux / MacOSでの起動：
 
     ```
-    celery -A app.celery worker -P gevent -c 1 -Q dataset,generation,mail --loglevel INFO
+    celery -A app.celery worker -P gevent -c 1 -Q dataset,generation,mail,ops_trace --loglevel INFO
     ```
 
     Windowsシステムでの起動の場合、以下のコマンドを使用してください：
 
     ```
-    celery -A app.celery worker -P solo --without-gossip --without-mingle -Q dataset,generation,mail --loglevel INFO
+    celery -A app.celery worker -P solo --without-gossip --without-mingle -Q dataset,generation,mail,ops_trace --loglevel INFO
     ```
 
     正常な出力：

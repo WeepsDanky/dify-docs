@@ -32,13 +32,19 @@ docker compose -f docker-compose.middleware.yaml up -d
 
 #### 安装基础环境
 
-服务端启动需要使用到 Python 3.10.x，推荐使用 [Anaconda](https://docs.anaconda.com/free/anaconda/install/) 来快速安装 Python 环境，内部已包含 pip 包管理工具。
+服务器启动需要 Python 3.10.x。建议使用 [pyenv](https://github.com/pyenv/pyenv) 快速安装 Python 环境。
+
+要安装其他 Python 版本，请使用 `pyenv install`。
 
 ```Bash
-# 创建名为 dify 的 Python 3.10 环境
-conda create --name dify python=3.10
-# 切换至 dify Python 环境
-conda activate dify
+pyenv install 3.10
+```
+
+要切换到 "3.10" Python 环境，请使用以下命令:
+
+
+```Bash
+pyenv global 3.10
 ```
 
 #### 启动步骤
@@ -61,14 +67,19 @@ conda activate dify
     ```
 4.  安装依赖包
 
+    Dify API 服务使用 [Poetry](https://python-poetry.org/docs/) 来管理依赖。您可以执行 `poetry shell` 来激活环境。
+
     ```
-    pip install -r requirements.txt
+    poetry env use 3.10
+    poetry install
     ```
+
 5.  执行数据库迁移
 
     将数据库结构迁移至最新版本。
 
     ```
+    poetry shell
     flask db upgrade
     ```
 6.  启动 API 服务
@@ -94,13 +105,13 @@ conda activate dify
     用于消费异步队列任务，如数据集文件导入、更新数据集文档等异步操作。 Linux / MacOS 启动：
 
     ```
-    celery -A app.celery worker -P gevent -c 1 -Q dataset,generation,mail --loglevel INFO
+    celery -A app.celery worker -P gevent -c 1 -Q dataset,generation,mail,ops_trace --loglevel INFO
     ```
 
     如果使用 Windows 系统启动，请替换为该命令：
 
     ```
-    celery -A app.celery worker -P solo --without-gossip --without-mingle -Q dataset,generation,mail --loglevel INFO
+    celery -A app.celery worker -P solo --without-gossip --without-mingle -Q dataset,generation,mail,ops_trace --loglevel INFO
     ```
 
     正确输出：

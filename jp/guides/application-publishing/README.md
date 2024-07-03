@@ -4,6 +4,10 @@
 [迅速にウェブアプリを発表する](launch-your-webapp-quickly/)
 {% endcontent-ref %}
 
+{% content-ref url="embedding-in-websites.md" %}
+[ウェブサイトに埋め込む](embedding-in-websites.md)
+{% endcontent-ref %}
+
 {% content-ref url="developing-with-apis.md" %}
 [APIを使用した開発](developing-with-apis.md)
 {% endcontent-ref %}

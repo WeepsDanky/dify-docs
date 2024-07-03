@@ -22,6 +22,7 @@ difyソースコードのdockerディレクトリに移動し、次のコマン�
 
 ```Shell
 cd dify/docker
+cp .env.example .env
 docker compose up -d
 ```
 
@@ -70,6 +71,13 @@ docker compose down
 docker compose pull
 docker compose up -d
 ```
+
+#### 環境変数設定の同期 (重要！)
+
+* `.env.example` ファイルが更新された場合は、必ずローカルの `.env` ファイルをそれに応じて修正してください。
+
+* `.env` ファイル内のすべての設定項目を確認し、実際の運用環境に合わせて修正してください。`.env.example` から `.env` ファイルに新しい変数を追加したり、変更された値を更新する必要があるかもしれません。
+
 ### Difyへのアクセス
 
 `http://localhost`にアクセスして、Difyを使用します。

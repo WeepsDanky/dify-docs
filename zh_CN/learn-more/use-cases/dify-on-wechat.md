@@ -104,10 +104,12 @@ pip3 install -r requirements-optional.txt # 国内可以在该命令末尾添加
 
 **（3）填写配置文件**
 
-我们在项目根目录创建名为config.json的文件，文件内容如下，我们在**2.1.1小节（4）最后保存了API密钥**与**API服务器地址**，请把**dify\_api\_base**配置为**API服务器地址**；**dify\_api\_key**配置为**API密钥**其他配置保持不变
+我们在项目根目录创建名为config.json的文件，文件内容如下，我们在**2.1.1小节（4）** 最后保存了**API密钥**与**API服务器地址**，请把**dify_api_base**配置为**API服务器地址**；**dify_api_key**配置为**API密钥**其他配置保持不变。
+
+(PS: 很多朋友可能并不是严格按照我教程给出的步骤创建**聊天助手类型**的Dify应用，在此特别说明一下**dify_app_type**配置方法，如果你创建了**聊天助手**应用请配置为**chatbot**；创建了**Agent**应用请配置为**agent**; 创建了**工作流**应用请配置为**workflow**。)
 
 ```bash
-{ 
+{
   "dify_api_base": "https://api.dify.ai/v1",
   "dify_api_key": "app-xxx",
   "dify_app_type": "chatbot",
@@ -143,6 +145,8 @@ python3 app.py   # windows环境下该命令通常为 python app.py
 
 我们看到，微信机器人的回复与在Dify测试页面上的回复一致。至此，恭喜你成功把Dify接入了个人微信🎉🎉🎉
 
+(PS: 有些朋友到这里可能在日志中看到正常回复了消息，但是微信中没有收到消息，请**不要用自己的微信给自己发消息**)
+
 **（4）服务器部署**
 
 1. 源码部署
@@ -152,7 +156,33 @@ cd dify-on-wechat
 nohup python3 app.py & tail -f nohup.out   # 在后台运行程序并通过日志输出二维码
 ```
 
-2. docker部署
+2. docker compose部署
+
+容器的**环境变量**会**覆盖**config.json文件的配置，请修改docker/docker-compose.yml文件环境变量为你实际的配置，配置方法与**2.1.1小节(4)**
+的config.json配置一致。
+
+请确保正确配置**DIFY_API_BASE**, **DIFY_API_KEY**与**DIFY_APP_TYPE**环境变量。
+
+```yaml
+version: '2.0'
+services:
+  dify-on-wechat:
+    image: hanfangyuan/dify-on-wechat
+    container_name: dify-on-wechat
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      DIFY_API_BASE: 'https://api.dify.ai/v1'
+      DIFY_API_KEY: 'app-xx'
+      DIFY_APP_TYPE: 'chatbot'
+      MODEL: 'dify'
+      SINGLE_CHAT_PREFIX: '[""]'
+      SINGLE_CHAT_REPLY_PREFIX: '""'
+      GROUP_CHAT_PREFIX: '["@bot"]'
+      GROUP_NAME_WHITE_LIST: '["ALL_GROUP"]'
+```
+
+然后执行如下命令启动容器
 
 ```bash
 cd dify-on-wechat/docker       # 进入docker目录

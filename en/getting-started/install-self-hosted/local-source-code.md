@@ -20,6 +20,7 @@ Before enabling business services, we need to first deploy PostgresSQL / Redis /
 
 ```Bash
 cd docker
+cp middleware.env.example middleware.env
 docker compose -f docker-compose.middleware.yaml up -d
 ```
 
@@ -32,26 +33,28 @@ docker compose -f docker-compose.middleware.yaml up -d
 
 #### Installation of the basic environment:
 
-Server startup requires Python 3.10.x. It is recommended to use [Anaconda](https://docs.anaconda.com/free/anaconda/install/) for quick installation of the Python environment, which already includes the pip package management tool.
+Server startup requires Python 3.10.x. It is recommended to use [pyenv](https://github.com/pyenv/pyenv) for quick installation of the Python environment.
 
-To create a Python 3.10 environment named "dify," you can use the following command:
+To install additional Python versions, use pyenv install.
 
 ```Bash
-conda create --name dify python=3.10
+pyenv install 3.10
 ```
 
-To switch to the "dify" Python environment, use the following command:
+To switch to the "3.10" Python environment, use the following command:
 
-```
-conda activate dify
+```Bash
+pyenv global 3.10
 ```
 
 #### Follow these steps :
 
 1.  Navigate to the "api" directory:
 
-    <pre><code><strong>cd api
-    </strong></code></pre>
+    ```
+    cd api
+    ```
+
 2.  Copy the environment variable configuration file:
 
     ```
@@ -63,16 +66,25 @@ conda activate dify
     openssl rand -base64 42
     sed -i 's/SECRET_KEY=.*/SECRET_KEY=<your_value>/' .env
     ```
+
 4.  Install the required dependencies:
 
-    <pre><code><strong>pip install -r requirements.txt
-    </strong></code></pre>
+    Dify API service uses [Poetry](https://python-poetry.org/docs/) to manage dependencies. You can execute `poetry shell` to activate the environment.
+
+    ```
+    poetry env use 3.10
+    poetry install
+    ```
+
 5.  Perform the database migration
 
     Perform database migration to the latest version:
 
-    <pre><code><strong>flask db upgrade
-    </strong></code></pre>
+    ```
+    poetry shell
+    flask db upgrade
+    ```
+
 6.  Start the API server:
 
     ```
@@ -96,13 +108,13 @@ conda activate dify
     To consume asynchronous tasks from the queue, such as dataset file import and dataset document updates, follow these steps to start the Worker service on Linux or macOS:
 
     ```
-    celery -A app.celery worker -P gevent -c 1 -Q dataset,generation,mail --loglevel INFO
+    celery -A app.celery worker -P gevent -c 1 --loglevel INFO -Q dataset,generation,mail,ops_trace
     ```
 
     If you are using a Windows system to start the Worker service, please use the following command instead:
 
     ```
-    celery -A app.celery worker -P solo --without-gossip --without-mingle -Q dataset,generation,mail --loglevel INFO
+    celery -A app.celery worker -P solo --without-gossip --without-mingle -Q dataset,generation,mail,ops_trace --loglevel INFO
     ```
 
     output:
@@ -123,7 +135,7 @@ conda activate dify
                     .> dataset          exchange=dataset(direct) key=dataset
                     .> generation       exchange=generation(direct) key=generation
                     .> mail             exchange=mail(direct) key=mail
-
+    
     [tasks]
       . tasks.add_document_to_index_task.add_document_to_index_task
       . tasks.clean_dataset_task.clean_dataset_task
@@ -141,7 +153,7 @@ conda activate dify
       . tasks.remove_segment_from_index_task.remove_segment_from_index_task
       . tasks.update_segment_index_task.update_segment_index_task
       . tasks.update_segment_keyword_index_task.update_segment_keyword_index_task
-
+    
     [2023-07-31 12:58:08,831: INFO/MainProcess] Connected to redis://:**@localhost:6379/1
     [2023-07-31 12:58:08,840: INFO/MainProcess] mingle: searching for neighbors
     [2023-07-31 12:58:09,873: INFO/MainProcess] mingle: all alone
@@ -190,7 +202,7 @@ Please visit [https://nodejs.org/en/download](https://nodejs.org/en/download) an
     # console or api domain.
     # example: http://udify.app/api
     NEXT_PUBLIC_PUBLIC_API_PREFIX=http://localhost:5001/api
-
+    
     # SENTRY
     NEXT_PUBLIC_SENTRY_DSN=
     NEXT_PUBLIC_SENTRY_ORG=
