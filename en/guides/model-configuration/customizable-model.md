@@ -8,7 +8,9 @@ It is important to note that for custom models, each model integration requires 
 
 Unlike predefined models, custom vendor integration will always have the following two parameters, which do not need to be defined in the vendor YAML file.
 
-<figure><img src="../../.gitbook/assets/Feb 4,2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/model-configuration/Feb 4,2.png" alt=""><figcaption></figcaption></figure>
+
+<!-- TODO -->
 
 In the previous section, we have learned that vendors do not need to implement `validate_provider_credential`. The Runtime will automatically call the corresponding model layer's `validate_credentials` based on the model type and model name selected by the user for validation.
 

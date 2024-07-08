@@ -9,6 +9,8 @@ Dify datasets support importing from Notion and setting up **synchronization** s
 
 <figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption><p>Binding Notion</p></figcaption></figure>
 
+<!-- TODO -->
+
 ### Importing Notion Data
 
 After completing the authorization verification, go to the create dataset page, click **Sync from Notion Content**, and select the authorized pages you need to import.
@@ -56,6 +58,8 @@ After copying, go back to the Dify source code, and configure the relevant envir
 <figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (6) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 After successfully making the integration public on the integration settings page, you will be able to access the integration key in the Keys tab:
+
+<!-- TODO -->
 
 <figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 

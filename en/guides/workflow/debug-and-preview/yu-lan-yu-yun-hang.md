@@ -2,7 +2,7 @@
 
 Dify Workflow offers a comprehensive set of execution and debugging features. In conversational applications, clicking "Preview" enters debugging mode.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (1).png" alt=""><figcaption></figcaption></figure>
 
 In workflow applications, clicking "Run" enters debugging mode.
 

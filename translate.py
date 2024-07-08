@@ -144,7 +144,7 @@ def check_and_move_images(markdown_dir, images_dir, target_images_dir):
                         print(f"Image moved to: {target_img_path}")
                         modified = True
                         # Update the image path in the markdown content
-                        new_img_path = target_img_path
+                        new_img_path = '/' + target_img_path.replace("\\", "/")
                         content = content.replace(img_path, new_img_path)
                         print(f"Image link replaced with: {target_img_path}")
                     else:
@@ -156,7 +156,7 @@ def check_and_move_images(markdown_dir, images_dir, target_images_dir):
                         md_file.write(content)
 
 # Example usage
-markdown_directory = 'en/guides/knowledge-base'
-images_directory = 'en/en/.gitbook'
-target_images_directory = '/en/.gitbook/assets/guides/knowledge-base'
+markdown_directory = 'en/learn-more/'
+images_directory = 'en/en/en/.gitbook'
+target_images_directory = 'en/.gitbook/assets/learn-more/'
 check_and_move_images(markdown_directory, images_directory, target_images_directory)

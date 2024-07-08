@@ -4,7 +4,7 @@
 
 In the **Discover** section, several commonly used template applications are provided. These applications cover areas such as human resources, assistants, translation, programming, and writing.
 
-<figure><img src="../../../.gitbook/assets/image (248).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workspace/image (248).png" alt=""><figcaption></figcaption></figure>
 
 To use a template application, click the "Add to Workspace" button on the template. You can then use the application in the workspace on the left side.
 

@@ -20,7 +20,7 @@ In this example: The Arxiv paper retrieval tool requires **paper author** or **p
 
 2. **Converting text to structured data**, such as in the long story iteration generation application, where it serves as a pre-step for the [iteration node](iteration.md), converting chapter content in text format to an array format, facilitating multi-round generation processing by the iteration node.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 3. **Extracting structured data and using the [HTTP Request](http\_request.md)**, which can request any accessible URL, suitable for obtaining external retrieval results, webhooks, generating images, and other scenarios.
 

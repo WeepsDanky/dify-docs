@@ -6,7 +6,7 @@ The "End" node serves as the termination point of the process, beyond which no f
 
 Single-Path Execution Example:
 
-<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Multi-Path Execution Example:
 
