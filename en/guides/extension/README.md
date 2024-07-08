@@ -5,6 +5,3 @@ In the process of creating AI applications, developers face constantly changing 
 [API Based Extension](api_based_extension/ "mention")
 
 [code-based-extension.md](code-based-extension.md "mention")
-
-
-

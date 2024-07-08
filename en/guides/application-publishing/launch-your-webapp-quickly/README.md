@@ -9,7 +9,7 @@ One of the benefits of creating AI applications with Dify is that you can launch
 
 In the application overview page, you can find a card for the AI site (WebApp). Simply enable WebApp access to get a shareable link for your users.
 
-<figure><img src="../../.gitbook/assets/share your App.png" alt=""><figcaption><p>Share your WebApp</p></figcaption></figure>
+<figure><img src="..\..\..\.gitbook\assets\guides\application-publishing\launch-your-webapp-quickly\conversation-application\share your App.png" alt=""><figcaption><p>Share your WebApp</p></figcaption></figure>
 
 We provide a sleek WebApp interface for both of the following applications:
 
@@ -38,8 +38,8 @@ Dify supports embedding your AI application into your business website. With thi
 
     Copy the script code and paste it into the `<head>` or `<body>` tags on your website.
 
-<figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..\..\..\.gitbook\assets\guides\application-publishing\launch-your-webapp-quickly\conversation-application\image (46).png" alt=""><figcaption></figcaption></figure>
 
 For example, if you paste the script code into the section of your official website, you will get an AI chatbot on your website:
 
-<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..\..\..\.gitbook\assets\guides\application-publishing\launch-your-webapp-quickly\conversation-application\image (42).png" alt=""><figcaption></figcaption></figure>

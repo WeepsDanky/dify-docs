@@ -133,6 +133,8 @@ Follow the above steps and run the service to see the newly added custom type.
 
 <figure><img src="https://langgenius.feishu.cn/space/api/box/stream/download/asynccode/?code=NDZkOTBjNjJmZDdkNTdkYTkxMDllNTgzMzA1MjE2MzBfM0FYYjFtWkE1bHVPdWdYQ0ZkNWNRdXBXbmhoMklkVW9fVG9rZW46SnZSVWIyN3Nkb09pZkV4NDZyM2NIckJtbnhnXzE2OTk0NTE5NjM6MTY5OTQ1NTU2M19WNA" alt=""><figcaption><p>Add Tool</p></figcaption></figure>
 
+<!-- TODO -->
+
 ### 5. **Debug the Extension**
 
 Now, you can select the custom `Weather Search` external data tool extension type in the Dify application orchestration interface for debugging.
