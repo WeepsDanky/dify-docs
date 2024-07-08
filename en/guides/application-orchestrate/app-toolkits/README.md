@@ -4,31 +4,31 @@ In **Studio -- Application Orchestration**, click **Add Feature** to open the ap
 
 The application toolbox provides various additional features for Dify's [applications](../#application_type):
 
-<figure><img src="../../../.gitbook/assets/image (237).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/application_orchestrate/app_toolkits/image (237).png" alt=""><figcaption></figcaption></figure>
 
 ### Conversation Opening
 
 In conversational applications, the AI will proactively say the first sentence or ask a question. You can edit the content of the opening, including the initial question. Using conversation openings can guide users to ask questions, explain the application background, and lower the barrier for initiating a conversation.
 
-<figure><img src="../../../.gitbook/assets/image (240).png" alt=""><figcaption><p>Conversation Opening</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/application_orchestrate/app_toolkits/image (240).png" alt=""><figcaption><p>Conversation Opening</p></figcaption></figure>
 
 ### Next Step Question Suggestions
 
 Setting next step question suggestions allows the AI to generate 3 follow-up questions based on the previous conversation, guiding the next round of interaction.
 
-<figure><img src="../../../.gitbook/assets/image (241).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/application_orchestrate/app_toolkits/image (241).png" alt=""><figcaption></figcaption></figure>
 
 ### Text-to-Speech
 
 When enabled, this feature converts the AI's responses into natural-sounding speech.
 
-<figure><img src="../../../.gitbook/assets/image (242).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/application_orchestrate/app_toolkits/image (242).png" alt=""><figcaption></figcaption></figure>
 
 ### Speech-to-Text
 
 When enabled, you can record audio within the application and automatically convert the speech into text.
 
-<figure><img src="../../../.gitbook/assets/image (243).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/application_orchestrate/app_toolkits/image (243).png" alt=""><figcaption></figcaption></figure>
 
 ### Citation and Attribution
 

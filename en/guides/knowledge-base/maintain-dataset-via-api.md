@@ -13,7 +13,7 @@
 
 Navigate to the dataset page, and you can switch to the **API** page from the left navigation. On this page, you can view the dataset API documentation provided by Dify and manage the credentials for accessing the dataset API in **API Keys**.
 
-<figure><img src="../../.gitbook/assets/dataset-api-token.png" alt=""><figcaption><p>Knowledge API Document</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/dataset-api-token.png" alt=""><figcaption><p>Knowledge API Document</p></figcaption></figure>
 
 ### API Call Examples
 

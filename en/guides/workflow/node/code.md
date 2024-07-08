@@ -12,7 +12,7 @@ The code node supports running Python/NodeJS code to perform data transformation
 
 This node significantly enhances the flexibility for developers, allowing them to embed custom Python or JavaScript scripts within the workflow and manipulate variables in ways that preset nodes cannot achieve. Through configuration options, you can specify the required input and output variables and write the corresponding execution code:
 
-<figure><img src="../../../.gitbook/assets/image (157).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (157).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ## Configuration
 If you need to use variables from other nodes in the code node, you must define the variable names in the `input variables` and reference these variables. You can refer to [Variable References](../key_concept.md#variables).

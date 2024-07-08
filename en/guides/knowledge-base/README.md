@@ -6,7 +6,6 @@ The training data for large language models is generally based on publicly avail
 {% hint style="info" %}
 To learn more, please check the extended reading on [Retrieval-Augmented Generation (RAG)](../../learn-more/extended-reading/retrieval-augment/)
 {% endhint %} 
-<!-- TODO: check link -->
 
 Dify's knowledge base feature visualizes each step in the RAG pipeline, providing a simple and easy-to-use user interface to help application builders in managing personal or team knowledge bases, and quickly integrating them into AI applications. You only need to prepare text content, such as:
 

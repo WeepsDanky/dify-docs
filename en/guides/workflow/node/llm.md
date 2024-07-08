@@ -2,7 +2,7 @@
 
 Invoking a Large Language Model for Question Answering or Natural Language Processing. Within an LLM node, you can select an appropriate model, compose prompts, set the context referenced in the prompts, configure memory settings, and adjust the memory window size.
 
-<figure><img src="../../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 Configuring an LLM node primarily involves two steps:
 
@@ -13,7 +13,7 @@ Configuring an LLM node primarily involves two steps:
 
 Before selecting a model suitable for your task, you must complete the model configuration in "System Settings—Model Provider". The specific configuration method can be referenced in the [model configuration instructions](https://docs.dify.ai/tutorials/model-configuration#model-integration-settings). After selecting a model, you can configure its parameters.
 
-<figure><img src="../../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Write Prompts**
 
@@ -21,15 +21,15 @@ Within an LLM node, you can customize the model input prompts. If you choose a c
 
 For instance, in a knowledge base Q\&A scenario, after linking the "Result" variable from the knowledge base retrieval node in "Context", inserting the "Context" special variable in the prompts will use the text retrieved from the knowledge base as the context background information for the model input.
 
-<figure><img src="../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 In the prompt editor, you can bring up the variable insertion menu by typing "/" or "{" to insert special variable blocks or variables from preceding flow nodes into the prompts as context content.
 
-<figure><img src="../../../.gitbook/assets/image (13) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (13) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 If you opt for a completion model, the system provides preset prompt templates for conversational applications. You can customize the content of the prompts and insert special variable blocks like "Conversation History" and "Context" at appropriate positions by typing "/" or "{", enabling richer conversational functionalities.
 
-<figure><img src="../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Memory Toggle Settings**&#x20;
 

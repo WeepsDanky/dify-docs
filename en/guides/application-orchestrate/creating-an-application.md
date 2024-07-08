@@ -20,7 +20,7 @@ Dify offers two types of applications: text generation and conversational. More 
 
 After logging in as an administrator in Dify, go to the main navigation application page Click "Create New Application" Choose a conversational or text generation application and give it a name (modifiable later)
 
-<figure><img src="../../.gitbook/assets/create a new App.png" alt=""><figcaption><p>Create a new App</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/application_orchestrate/creating-an-application/create a new App.png" alt=""><figcaption><p>Create a new App</p></figcaption></figure>
 
 We provide some templates in the application creation interface, and you can click to create from a template in the popup when creating an application. These templates will provide inspiration and reference for the application you want to develop.
 
@@ -32,7 +32,7 @@ If you have obtained a template from the community or someone else, you can clic
 
 If you are using it for the first time, you will be prompted to enter your OpenAI API key. A properly functioning LLM key is a prerequisite for using Dify. If you don't have one yet, please apply for one.
 
-<figure><img src="../../.gitbook/assets/OpenAI API Key.png" alt=""><figcaption><p>Enter your OpenAI API Key</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/application_orchestrate/creating-an-application/OpenAI API Key.png" alt=""><figcaption><p>Enter your OpenAI API Key</p></figcaption></figure>
 
 After creating an application or selecting an existing one, you will arrive at an application overview page showing the application's profile. You can directly access your WebApp or check the API status here, as well as enable or disable them.
 

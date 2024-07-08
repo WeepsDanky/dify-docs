@@ -4,7 +4,7 @@
 
 Each document uploaded to the knowledge base is stored in the form of text segments (Chunks). You can view the specific text content of each segment in the segment list.
 
-<figure><img src="../../.gitbook/assets/image%20(3)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1).png" alt=""><figcaption><p>Viewing uploaded document segments</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Viewing uploaded document segments</p></figcaption></figure>
 
 ***
 
@@ -18,15 +18,15 @@ When checking segment quality, pay attention to the following situations:
 
 * **Overly short text segments**, leading to semantic loss;
 
-<figure><img src="../../.gitbook/assets/image%20(183).png" alt="" width="373"><figcaption><p>Overly short text segments</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (183).png" alt="" width="373"><figcaption><p>Overly short text segments</p></figcaption></figure>
 
 * **Overly long text segments**, leading to semantic noise affecting matching accuracy;
 
-<figure><img src="../../.gitbook/assets/image%20(186).png" alt="" width="375"><figcaption><p>Overly long text segments</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (186).png" alt="" width="375"><figcaption><p>Overly long text segments</p></figcaption></figure>
 
 * **Obvious semantic truncation**, which occurs when using maximum segment length limits, leading to forced semantic truncation and missing content during recall;
 
-<figure><img src="../../.gitbook/assets/image%20(185).png" alt="" width="357"><figcaption><p>Obvious semantic truncation</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (185).png" alt="" width="357"><figcaption><p>Obvious semantic truncation</p></figcaption></figure>
 
 ***
 
@@ -34,11 +34,11 @@ When checking segment quality, pay attention to the following situations:
 
 In the segment list, click "Add Segment" to add one or multiple custom segments to the document.
 
-<figure><img src="../../.gitbook/assets/image%20(2)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 When adding segments in bulk, you need to first download the CSV format segment upload template, edit all the segment content in Excel according to the template format, save the CSV file, and then upload it.
 
-<figure><img src="../../.gitbook/assets/image%20(4)%20(1)%20(1)%20(1)%20(1)%20(1).png" alt=""><figcaption><p>Bulk adding custom segments</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Bulk adding custom segments</p></figcaption></figure>
 
 ***
 
@@ -46,7 +46,7 @@ When adding segments in bulk, you need to first download the CSV format segment 
 
 In the segment list, you can directly edit the content of the added segments, including the text content and keywords of the segments.
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption><p>Editing document segments</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (5) (1).png" alt=""><figcaption><p>Editing document segments</p></figcaption></figure>
 
 ***
 
@@ -58,7 +58,7 @@ In addition to marking metadata information from different source documents, suc
 The metadata filtering and citation source functions are not yet supported in the current version.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image%20(179).png" alt=""><figcaption><p>Metadata management</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (179).png" alt=""><figcaption><p>Metadata management</p></figcaption></figure>
 
 ***
 
@@ -68,7 +68,7 @@ In "Knowledge Base > Document List," click "Add File" to upload new documents or
 
 A knowledge base (Knowledge) is a collection of documents (Documents). Documents can be uploaded by developers or operators, or synchronized from other data sources (usually corresponding to a file unit in the data source).
 
-<figure><img src="../../.gitbook/assets/image%20(181).png" alt=""><figcaption><p>Uploading new documents to the knowledge base</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (181).png" alt=""><figcaption><p>Uploading new documents to the knowledge base</p></figcaption></figure>
 
 ***
 
@@ -84,7 +84,7 @@ A knowledge base (Knowledge) is a collection of documents (Documents). Documents
 
 Click **Settings** in the left navigation of the knowledge base to change the following settings:
 
-<figure><img src="../../.gitbook/assets/image%20(182).png" alt=""><figcaption><p>Knowledge base settings</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (182).png" alt=""><figcaption><p>Knowledge base settings</p></figcaption></figure>
 
 **Knowledge Base Name**: Define a name to identify a knowledge base.
 
@@ -108,4 +108,4 @@ When the recall mode of the knowledge base is N-Choose-1, the knowledge base is 
 
 Dify Knowledge Base provides a complete set of standard APIs. Developers can use API calls to perform daily management and maintenance operations such as adding, deleting, modifying, and querying documents and segments in the knowledge base. Please refer to the [Knowledge Base API Documentation](maintain-dataset-via-api.md).
 
-<figure><img src="../../.gitbook/assets/image%20(180).png" alt=""><figcaption><p>Knowledge base API management</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (180).png" alt=""><figcaption><p>Knowledge base API management</p></figcaption></figure>

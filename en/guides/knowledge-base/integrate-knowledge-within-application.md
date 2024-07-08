@@ -13,7 +13,7 @@ Taking a chat assistant as an example, the process is as follows:
 5. In **Debug and Preview**, input user questions related to the knowledge base for debugging
 6. After debugging, **Save and Publish** as an AI knowledge base Q&A application
 
-<figure><img src="../../.gitbook/assets/image (187).png" alt=""><figcaption><p>Associating a knowledge base within the application</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (187).png" alt=""><figcaption><p>Associating a knowledge base within the application</p></figcaption></figure>
 
 ***
 
@@ -25,7 +25,7 @@ Enter **Context -- Parameter Settings -- Recall Settings** to choose the recall 
 
 **Multi-Path Recall**: Matches all knowledge bases simultaneously based on user intent, querying related text fragments from multiple knowledge bases. After a re-ranking step, the best result matching the user question is selected from the multi-path query results. Requires configuration of the Rerank model API.
 
-<figure><img src="../../.gitbook/assets/image (189).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (189).png" alt=""><figcaption></figcaption></figure>
 
 **How to Choose a Recall Mode**
 
@@ -43,7 +43,7 @@ When users upload a knowledge base, the system reasoning model automatically gen
 
 Below is the technical flowchart for the N-Choose-1 Recall mode:
 
-<figure><img src="../../.gitbook/assets/image (190).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (190).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 N-Choose-1 Recall relies on the reasoning capability of the model and has many usage restrictions. The recall strategy for this mode is planned to be adjusted in Q3 2024.
@@ -69,7 +69,7 @@ The Multi-Path Recall mode does not depend on the reasoning capability of the mo
 
 The re-ranking model improves the results of semantic sorting by reordering the candidate document list based on the semantic match between the user question and the documents. It calculates the relevance score between the user question and each candidate document and returns a list of documents sorted by relevance from high to low.
 
-<figure><img src="../../.gitbook/assets/image (128).png" alt=""><figcaption><p>Hybrid Retrieval + Re-Ranking</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (128).png" alt=""><figcaption><p>Hybrid Retrieval + Re-Ranking</p></figcaption></figure>
 
 {% hint style="info" %}
 For more information about Rerank, please refer to the extended reading [Re-Ranking](integrate\_knowledge\_within\_application.md#zhong-pai-xu-rerank).
@@ -79,7 +79,7 @@ For more information about Rerank, please refer to the extended reading [Re-Rank
 
 Dify currently supports the Cohere Rerank model. Enter the "Model Provider -> Cohere" page and fill in the Rerank model's API key:
 
-<figure><img src="../../.gitbook/assets/image (112).png" alt=""><figcaption><p>Configuring the Cohere Rerank model in the model provider</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (112).png" alt=""><figcaption><p>Configuring the Cohere Rerank model in the model provider</p></figcaption></figure>
 
 How to obtain the Cohere Rerank model?
 
@@ -93,7 +93,7 @@ Besides supporting the Cohere Rerank API, you can also use local inference frame
 
 Go to the "Dataset -> Create Dataset -> Retrieval Settings" page and add the Rerank settings. In addition to setting Rerank when creating a dataset, you can also change the Rerank configuration in the settings of an already created dataset. Change the Rerank configuration in the recall mode settings of the application orchestration dataset.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Setting the Rerank model in the dataset retrieval mode</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Setting the Rerank model in the dataset retrieval mode</p></figcaption></figure>
 
 **TopK**: Used to set the number of relevant documents returned after Rerank.
 
@@ -101,4 +101,4 @@ Go to the "Dataset -> Create Dataset -> Retrieval Settings" page and add the Rer
 
 When setting the recall mode to Multi-Path Recall in the "Prompt Orchestration -> Context -> Settings" page, you need to enable the Rerank model.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Setting the Rerank model in the dataset multi-path recall mode</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Setting the Rerank model in the dataset multi-path recall mode</p></figcaption></figure>

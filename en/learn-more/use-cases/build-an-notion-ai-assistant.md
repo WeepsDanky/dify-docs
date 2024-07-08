@@ -90,11 +90,11 @@ For example, if your Notion notes focus on problem-solving in software developme
 
 _I want you to act as an IT Expert in my Notion workspace, using your knowledge of computer science, network infrastructure, Notion notes, and IT security to solve the problems_.
 
-<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/learn-more/image (40).png" alt=""><figcaption></figcaption></figure>
 
 It's recommended to initially enable the AI to actively furnish the users with a starter sentence, providing a clue as to what they can ask. Furthermore, activating the 'Speech to Text' feature can allow users to interact with your AI assistant using their voice.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/learn-more/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Finally, Click the "Publish" button on the top right of the page. Now you can click the public URL in the "Overview" section to converse with your personalized AI assistant!
 

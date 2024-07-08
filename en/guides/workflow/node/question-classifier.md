@@ -2,7 +2,7 @@
 
 Question Classifier node defines the categorization conditions for user queries, enabling the LLM to dictate the progression of the dialogue based on these categorizations. As illustrated in a typical customer service robot scenario, the question classifier can serve as a preliminary step to knowledge base retrieval, identifying user intent. Classifying user intent before retrieval can significantly enhance the recall efficiency of the knowledge base.
 
-<figure><img src="../../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (54).png" alt=""><figcaption></figcaption></figure>
 
 Configuring the Question Classifier Node involves three main components:
 

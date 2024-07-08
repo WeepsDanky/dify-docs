@@ -25,7 +25,7 @@ A conditional branching node has three parts:
 
 ### Scenario
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Taking the above **Text Summary Workflow** as an example:
 
@@ -37,4 +37,4 @@ Taking the above **Text Summary Workflow** as an example:
 
 For complex condition judgments, you can set multiple condition judgments and configure **AND** or **OR** between conditions to take the **intersection** or **union** of the conditions, respectively.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="369"><figcaption><p>Multiple Condition Judgments</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="369"><figcaption><p>Multiple Condition Judgments</p></figcaption></figure>

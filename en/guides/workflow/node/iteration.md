@@ -12,7 +12,7 @@ The iteration step performs the same steps on each item in a list. To use iterat
 
 #### **Example 1: Long Article Iteration Generator**
 
-<figure><img src="../../../.gitbook/assets/image%20(207).png" alt=""><figcaption><p>Long Story Generator</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (207).png" alt=""><figcaption><p>Long Story Generator</p></figcaption></figure>
 
 1. Enter the story title and outline in the **Start Node**.
 2. Use a **Code Node** to extract the complete content from user input.
@@ -24,15 +24,15 @@ The iteration step performs the same steps on each item in a list. To use iterat
 
 1. Configure the story title (title) and outline (outline) in the **Start Node**.
 
-<figure><img src="../../../.gitbook/assets/image%20(211).png" alt="" width="375"><figcaption><p>Start Node Configuration</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (211).png" alt="" width="375"><figcaption><p>Start Node Configuration</p></figcaption></figure>
 
 2. Use a **Jinja-2 Template Node** to convert the story title and outline into complete text.
 
-<figure><img src="../../../.gitbook/assets/image%20(209).png" alt="" width="375"><figcaption><p>Template Node</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (209).png" alt="" width="375"><figcaption><p>Template Node</p></figcaption></figure>
 
 3. Use a **Parameter Extraction Node** to convert the story text into an array (Array) structure. The parameter to extract is `sections`, and the parameter type is `Array[Object]`.
 
-<figure><img src="../../../.gitbook/assets/image%20(210).png" alt="" width="375"><figcaption><p>Parameter Extraction</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (210).png" alt="" width="375"><figcaption><p>Parameter Extraction</p></figcaption></figure>
 
 {% hint style="info" %}
 The effectiveness of parameter extraction is influenced by the model's inference capability and the instructions given. Using a model with stronger inference capabilities and adding examples in the **instructions** can improve the parameter extraction results.
@@ -40,11 +40,11 @@ The effectiveness of parameter extraction is influenced by the model's inference
 
 4. Use the array-formatted story outline as the input for the iteration node and process it within the iteration node using an **LLM Node**.
 
-<figure><img src="../../../.gitbook/assets/image%20(220).png" alt="" width="375"><figcaption><p>Configure Iteration Node</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (220).png" alt="" width="375"><figcaption><p>Configure Iteration Node</p></figcaption></figure>
 
 Configure the input variables `GenerateOverallOutline/output` and `Iteration/item` in the LLM Node.
 
-<figure><img src="../../../.gitbook/assets/image%20(221).png" alt="" width="375"><figcaption><p>Configure LLM Node</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (221).png" alt="" width="375"><figcaption><p>Configure LLM Node</p></figcaption></figure>
 
 {% hint style="info" %}
 Built-in variables for iteration: `items[object]` and `index[number]`.
@@ -56,11 +56,11 @@ Built-in variables for iteration: `items[object]` and `index[number]`.
 
 5. Configure a **Direct Reply Node** inside the iteration node to achieve streaming output after each iteration.
 
-<figure><img src="../../../.gitbook/assets/image%20(223).png" alt="" width="375"><figcaption><p>Configure Answer Node</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (223).png" alt="" width="375"><figcaption><p>Configure Answer Node</p></figcaption></figure>
 
 6. Complete debugging and preview.
 
-<figure><img src="../../../.gitbook/assets/image%20(222).png" alt=""><figcaption><p>Generate by Iterating Through Story Chapters</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (222).png" alt=""><figcaption><p>Generate by Iterating Through Story Chapters</p></figcaption></figure>
 
 #### **Example 2: Long Article Iteration Generator (Another Arrangement)**
 
@@ -126,11 +126,11 @@ A list is a specific data type where elements are separated by commas and enclos
 
 **Return Using the CODE Node**
 
-<figure><img src="../../../.gitbook/assets/image%20(213).png" alt="" width="375"><figcaption><p>CODE Node Outputting Array</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (213).png" alt="" width="375"><figcaption><p>CODE Node Outputting Array</p></figcaption></figure>
 
 **Return Using the Parameter Extraction Node**
 
-<figure><img src="../../../.gitbook/assets/image%20(214).png" alt="" width="375"><figcaption><p>Parameter Extraction Node Outputting Array</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (214).png" alt="" width="375"><figcaption><p>Parameter Extraction Node Outputting Array</p></figcaption></figure>
 
 ### How to Convert an Array to Text
 
@@ -138,7 +138,7 @@ The output variable of the iteration node is in array format and cannot be direc
 
 **Convert Using a Code Node**
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="" width="334"><figcaption><p>Code Node Conversion</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/image (1) (1) (1) (1).png" alt="" width="334"><figcaption><p>Code Node Conversion</p></figcaption></figure>
 
 ```python
 def main(articleSections: list):

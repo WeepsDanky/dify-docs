@@ -35,13 +35,13 @@ Dify offers trial quotas for cloud service users to experiment with different mo
 
 Dify automatically selects the default model based on usage. Configure this in `Settings > Model Provider`.
 
-<figure><img src="../../.gitbook/assets/image-default-models.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/model-configuration/image-default-models.png" alt=""><figcaption></figcaption></figure>
 
 ## Model Integration Settings
 
 Choose your model in Dify's `Settings > Model Provider`.
 
-<figure><img src="../../.gitbook/assets/image-20231210143654461.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/model-configuration/image-20231210143654461.png" alt=""><figcaption></figcaption></figure>
 
 Model providers fall into two categories:
 
@@ -69,4 +69,4 @@ Specific integration methods are not detailed here.
 
 Once configured, these models are ready for application use.
 
-<figure><img src="../../.gitbook/assets/choice-model-in-app.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/model-configuration/choice-model-in-app.png" alt=""><figcaption></figcaption></figure>
