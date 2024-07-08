@@ -3,7 +3,7 @@
 In **Studio -- Application Orchestration**, click **Add Feature** to open the application toolbox.
 
 The application toolbox provides various additional features for Dify's [applications](../#application_type):
-
+<!-- TODO CN IMG -->
 <figure><img src="/en/.gitbook/assets/guides/application_orchestrate/app_toolkits/image (237).png" alt=""><figcaption></figcaption></figure>
 
 ### Conversation Opening

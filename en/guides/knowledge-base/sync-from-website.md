@@ -18,25 +18,25 @@ Dify's knowledge base supports web scraping and parsing into Markdown for import
 
 First, you need to configure Firecrawl credentials in the **Data Source** section of the **Settings** page.
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Configuring Firecrawl Credentials</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/sync-from-website/image (6).png" alt=""><figcaption><p>Configuring Firecrawl Credentials</p></figcaption></figure>
 
 Log in to the [Firecrawl website](https://www.firecrawl.dev/) to complete registration, get your API Key, and then enter and save it in Dify.
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Get the API Key and save it in Dify</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/sync-from-website/image (7).png" alt=""><figcaption><p>Get the API Key and save it in Dify</p></figcaption></figure>
 
 #### 2. Scrape target webpage
 
 On the knowledge base creation page, select **Sync from website** and enter the URL to be scraped.
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Web scraping configuration</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/sync-from-website/image (1).png" alt=""><figcaption><p>Web scraping configuration</p></figcaption></figure>
 
 The configuration options include: Whether to crawl sub-pages, Page crawling limit, Page scraping max depth, Excluded paths, Include only paths, and Content extraction scope. After completing the configuration, click **Run** to preview the parsed pages.
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Execute scraping</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/sync-from-website/image (2).png" alt=""><figcaption><p>Execute scraping</p></figcaption></figure>
 
 #### 3. Review import results
 
 After importing the parsed text from the webpage, it is stored in the knowledge base documents. View the import results and click **Add URL** to continue importing new web pages.
 
-<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Importing parsed web text into the knowledge base</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/sync-from-website/image (5).png" alt=""><figcaption><p>Importing parsed web text into the knowledge base</p></figcaption></figure>
 

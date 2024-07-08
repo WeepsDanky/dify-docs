@@ -4,7 +4,7 @@
 
 Each document uploaded to the knowledge base is stored in the form of text segments (Chunks). You can view the specific text content of each segment in the segment list.
 
-<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Viewing uploaded document segments</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/viewing-uploaded-document.png" alt=""><figcaption><p>Viewing uploaded document segments</p></figcaption></figure>
 
 ***
 
@@ -34,11 +34,11 @@ When checking segment quality, pay attention to the following situations:
 
 In the segment list, click "Add Segment" to add one or multiple custom segments to the document.
 
-<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image-add-segment.png" alt=""><figcaption></figcaption></figure>
 
 When adding segments in bulk, you need to first download the CSV format segment upload template, edit all the segment content in Excel according to the template format, save the CSV file, and then upload it.
 
-<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Bulk adding custom segments</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/bulk-add-custom-segment.png" alt=""><figcaption><p>Bulk adding custom segments</p></figcaption></figure>
 
 ***
 
@@ -46,7 +46,7 @@ When adding segments in bulk, you need to first download the CSV format segment 
 
 In the segment list, you can directly edit the content of the added segments, including the text content and keywords of the segments.
 
-<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (5) (1).png" alt=""><figcaption><p>Editing document segments</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/edit-segment.png" alt=""><figcaption><p>Editing document segments</p></figcaption></figure>
 
 ***
 

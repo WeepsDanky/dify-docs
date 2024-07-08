@@ -4,6 +4,11 @@ description: Learn about the Different Models Supported by Dify.
 
 # Model Configuration
 
+Dify is a development platform for AI application based on LLM Apps, when you are using Dify for the first time, you need to go to **Settings --> Model Providers** to add and configure the LLM you are going to use. 
+
+<figure><img src="/en/.gitbook/assets/guides/model-configuration/model-provider-page.png" alt=""><figcaption>Settings - Model Provider</figcaption></figure>
+
+
 Dify supports major model providers like OpenAI's GPT series and Anthropic's Claude series. Each model's capabilities and parameters differ, so select a model provider that suits your application's needs. **Obtain the API key from the model provider's official website before using it in Dify.**
 
 ## Model Types in Dify

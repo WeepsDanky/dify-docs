@@ -1,12 +1,12 @@
 # Text Generator
-
+<!-- TODO Documentation Missing -->
 Text generation applications are applications that can automatically generate high-quality text based on prompts provided by users. They can generate various types of text, such as article summaries, translations, etc.
 
 ### **Applicable scenarios**
 
 Text generation applications are suitable for scenarios that require a large amount of text creation, such as news media, advertising, SEO, marketing, etc. They can provide efficient and fast text generation services for these industries, reduce labor costs, and improve production efficiency.
 
-### **How to c**ompose
+### **How to compose**
 
 Text generation applications supports: prefix prompt words, variables, context, and generating more similar content.
 

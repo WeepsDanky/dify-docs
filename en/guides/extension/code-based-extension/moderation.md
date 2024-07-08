@@ -208,6 +208,8 @@ Following the above steps, run the service to see the newly added custom type.
 
 <figure><img src="https://langgenius.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmRiMDI5YTU3NGY5M2JmNmY0N2Y0NmEwMGIwNGI0N2VfOGRrVE5GV25BT3laRnVxYlhLMUFYRWZWbm9NVkp3YXJfVG9rZW46Q1JPS2I3bFU0b0NQY2l4YVlhUGNVSTNNblJkXzE2OTk0NTExMTc6MTY5OTQ1NDcxN19WNA" alt=""><figcaption><p>Cloud Service</p></figcaption></figure>
 
+<!-- TODO -->
+
 ### 5. Debug the Extension
 
 At this point, you can select the custom `Cloud Service` content moderation extension type for debugging in the Dify application orchestration interface.

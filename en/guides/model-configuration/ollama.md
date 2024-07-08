@@ -1,6 +1,6 @@
 # Integrating Local Models Deployed with Ollama
 
-![ollama](/en/.gitbook/assets/guides/model-configuration/ollama.png)
+![ollama](/en/.gitbook/assets/guides/model-configuration/ollama/ollama.png)
 
 [Ollama](https://github.com/jmorganca/ollama) is a local inference framework client that allows one-click deployment of LLMs such as Llama 2, Mistral, Llava, etc.
 Dify supports integrating LLM and Text Embedding capabilities of large language models deployed with Ollama.
@@ -27,7 +27,7 @@ Dify supports integrating LLM and Text Embedding capabilities of large language 
 
    In `Settings > Model Providers > Ollama`, fill in:
 
-   ![](/en/.gitbook/assets/guides/model-configuration/ollama-config-en.png)
+   ![](/en/.gitbook/assets/guides/model-configuration/ollama/ollama-config-en.png)
 
    - Model Name: `llava`
    
@@ -59,7 +59,7 @@ Dify supports integrating LLM and Text Embedding capabilities of large language 
 
 4. Use Ollama Models
 
-    ![](/en/.gitbook/assets/guides/model-configuration/ollama-use-model-en.png)
+    ![](/en/.gitbook/assets/guides/model-configuration/ollama/ollama-use-model-en.png)
 
     Enter `Prompt Eng.` page of the App that needs to be configured, select the `llava` model under the Ollama provider, and use it after configuring the model parameters.
 

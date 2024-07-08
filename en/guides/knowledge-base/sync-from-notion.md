@@ -7,7 +7,7 @@ Dify datasets support importing from Notion and setting up **synchronization** s
 1. When creating a dataset and selecting the data source, click **Sync from Notion Content -- Bind Now** and follow the prompts to complete the authorization verification.
 2. Alternatively, you can go to **Settings -- Data Sources -- Add Data Source**, click on the Notion source **Bind**, and complete the authorization verification.
 
-<figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption><p>Binding Notion</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/binding-notion.png" alt=""><figcaption><p>Binding Notion</p></figcaption></figure>
 
 <!-- TODO -->
 
@@ -39,11 +39,11 @@ Specific steps:
 
 Click the **New integration** button. The type is **Internal** by default (cannot be modified). Select the associated space, enter the integration name, upload a logo, and click **Submit** to create the integration successfully.
 
-<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/integrate-notion-1.png" alt=""><figcaption></figcaption></figure>
 
 After creating the integration, you can update its settings as needed under the Capabilities tab and click the **Show** button under Secrets to copy the secrets.
 
-<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/notion-secret.png" alt=""><figcaption></figcaption></figure>
 
 After copying, go back to the Dify source code, and configure the relevant environment variables in the **.env** file. The environment variables are as follows:
 
@@ -55,13 +55,13 @@ After copying, go back to the Dify source code, and configure the relevant envir
 
 **You need to upgrade the internal integration to a public integration.** Navigate to the Distribution page of the integration, and toggle the switch to make the integration public. When switching to the public setting, you need to fill in additional information in the Organization Information form below, including your company name, website, and redirect URL, then click the **Submit** button.
 
-<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (6) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/public-integration.png" alt=""><figcaption></figcaption></figure>
 
 After successfully making the integration public on the integration settings page, you will be able to access the integration key in the Keys tab:
 
 <!-- TODO -->
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/notion-public-secret.png" alt=""><figcaption></figcaption></figure>
 
 Go back to the Dify source code, and configure the relevant environment variables in the **.env** file. The environment variables are as follows:
 

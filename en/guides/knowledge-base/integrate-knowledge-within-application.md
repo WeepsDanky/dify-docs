@@ -93,7 +93,7 @@ Besides supporting the Cohere Rerank API, you can also use local inference frame
 
 Go to the "Dataset -> Create Dataset -> Retrieval Settings" page and add the Rerank settings. In addition to setting Rerank when creating a dataset, you can also change the Rerank configuration in the settings of an already created dataset. Change the Rerank configuration in the recall mode settings of the application orchestration dataset.
 
-<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Setting the Rerank model in the dataset retrieval mode</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/setting-rerank-retrieval.png" alt="" width="563"><figcaption><p>Setting the Rerank model in the dataset retrieval mode</p></figcaption></figure>
 
 **TopK**: Used to set the number of relevant documents returned after Rerank.
 
@@ -101,4 +101,4 @@ Go to the "Dataset -> Create Dataset -> Retrieval Settings" page and add the Rer
 
 When setting the recall mode to Multi-Path Recall in the "Prompt Orchestration -> Context -> Settings" page, you need to enable the Rerank model.
 
-<figure><img src="/en/.gitbook/assets/guides/knowledge-base/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Setting the Rerank model in the dataset multi-path recall mode</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/knowledge-base/setting-rerank-multipath.png" alt=""><figcaption><p>Setting the Rerank model in the dataset multi-path recall mode</p></figcaption></figure>
