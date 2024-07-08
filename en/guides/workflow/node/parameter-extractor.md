@@ -16,19 +16,19 @@ Some nodes within the workflow require specific data formats as inputs, such as 
 
 In this example: The Arxiv paper retrieval tool requires **paper author** or **paper ID** as input parameters. The parameter extractor extracts the paper ID **2405.10739** from the query "What is the content of this paper: 2405.10739" and uses it as the tool parameter for precise querying.
 
-<figure><img src="../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption><p>Arxiv Paper Retrieval Tool</p></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/node/parameter-extractor/image (8) (1) (1).png" alt=""><figcaption><p>Arxiv Paper Retrieval Tool</p></figcaption></figure>
 
-2. **Converting text to structured data**, such as in the long story iteration generation application, where it serves as a pre-step for the [iteration node](iteration.md), converting chapter content in text format to an array format, facilitating multi-round generation processing by the iteration node.
+1. **Converting text to structured data**, such as in the long story iteration generation application, where it serves as a pre-step for the [iteration node](iteration.md), converting chapter content in text format to an array format, facilitating multi-round generation processing by the iteration node.
 
-<figure><img src="/en/.gitbook/assets/guides/workflow/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/node/parameter-extractor/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-3. **Extracting structured data and using the** [**HTTP Request**](http\_request.md), which can request any accessible URL, suitable for obtaining external retrieval results, webhooks, generating images, and other scenarios.
+1. **Extracting structured data and using the** [**HTTP Request**](http\_request.md), which can request any accessible URL, suitable for obtaining external retrieval results, webhooks, generating images, and other scenarios.
 
 ***
 
 ### 3 How to Configure
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/guides/workflow/node/parameter-extractor/image (3) (1) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 **Configuration Steps**
 

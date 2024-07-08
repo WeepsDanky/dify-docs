@@ -1,17 +1,56 @@
-# Question Classifier
+# Issue Classification
 
-Question Classifier node defines the categorization conditions for user queries, enabling the LLM to dictate the progression of the dialogue based on these categorizations. As illustrated in a typical customer service robot scenario, the question classifier can serve as a preliminary step to knowledge base retrieval, identifying user intent. Classifying user intent before retrieval can significantly enhance the recall efficiency of the knowledge base.
+### 1. Definition
 
-<figure><img src="/en/.gitbook/assets/guides/workflow/image (54).png" alt=""><figcaption></figcaption></figure>
+By defining classification descriptions, the issue classifier can infer and match user inputs to the corresponding categories and output the classification results.
 
-Configuring the Question Classifier Node involves three main components:
+***
 
-1. **Selecting the Input Variable**
-2. **Configuring the Inference Model**
-3. **Writing the Classification Method**
+### 2. Scenarios
 
-**Selecting the Input Variable** In conversational customer scenarios, you can use the user input variable from the "Start Node" (sys.query) as the input for the question classifier. In automated/batch processing scenarios, customer feedback or email content can be utilized as input variables.
+Common use cases include **customer service conversation intent classification, product review classification, and bulk email classification**.
 
-**Configuring the Inference Model** The question classifier relies on the natural language processing capabilities of the LLM to categorize text. You will need to configure an inference model for the classifier. Before configuring this model, you might need to complete the model setup in "System Settings - Model Provider". The specific configuration method can be found in the [model configuration instructions](https://docs.dify.ai/tutorials/model-configuration#model-integration-settings). After selecting a suitable model, you can configure its parameters.
+In a typical product customer service Q&A scenario, the issue classifier can serve as a preliminary step before knowledge base retrieval. It classifies the user's input question, directing it to different downstream knowledge base queries to accurately respond to the user's question.
 
-**Writing Classification Conditions** You can manually add multiple classifications by composing keywords or descriptive sentences that fit each classification. Based on the descriptions of these conditions, the question classifier can route the dialogue to the appropriate process path according to the semantics of the user's input.
+The following diagram is an example workflow template for a product customer service scenario:
+
+<figure><img src="/en/.gitbook/assets/guides/workflow/node/question_classifier/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+In this scenario, we set up three classification labels/descriptions:
+
+* Category 1: **Questions related to after-sales service**
+* Category 2: **Questions related to product usage**
+* Category 3: **Other questions**
+
+When users input different questions, the issue classifier will automatically classify them based on the set classification labels/descriptions:
+
+* "**How to set up contacts on iPhone 14?**" —> "**Questions related to product usage**"
+* "**What is the warranty period?**" —> "**Questions related to after-sales service**"
+* "**How's the weather today?**" —> "**Other questions**"
+
+***
+
+### 3. How to Configure
+
+<figure><img src="/en/.gitbook/assets/guides/workflow/node/question_classifier/image (3) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+**Configuration Steps:**
+
+1. **Select Input Variable**: This refers to the content to be classified, usually the user's question in a customer service Q&A scenario, e.g., `sys.query`.
+2. **Choose Inference Model**: The issue classifier leverages the natural language classification and inference capabilities of large language models. Selecting an appropriate model can enhance classification effectiveness.
+3. **Write Classification Labels/Descriptions**: You can manually add multiple classifications by writing keywords or descriptive statements for each category, helping the large language model better understand the classification criteria.
+4. **Choose Corresponding Downstream Nodes**: After classification, the issue classification node can direct the flow to different paths based on the relationship between the classification and downstream nodes.
+
+#### Advanced Settings:
+
+**Instructions**: In **Advanced Settings - Instructions**, you can add supplementary instructions, such as more detailed classification criteria, to enhance the classifier's capabilities.
+
+**Memory**: When enabled, each input to the issue classifier will include chat history from the conversation to help the LLM understand the context and improve question comprehension in interactive dialogues.
+
+**Memory Window**: When the memory window is closed, the system dynamically filters the amount of chat history passed based on the model's context window; when open, users can precisely control the amount of chat history passed (in terms of numbers).
+
+**Output Variable**:
+
+`class_name`
+
+This is the classification name output after classification. You can use the classification result variable in downstream nodes as needed.

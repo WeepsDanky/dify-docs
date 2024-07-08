@@ -1,44 +1,92 @@
 # LLM
 
-Invoking a Large Language Model for Question Answering or Natural Language Processing. Within an LLM node, you can select an appropriate model, compose prompts, set the context referenced in the prompts, configure memory settings, and adjust the memory window size.
+### Definition
 
-<figure><img src="/en/.gitbook/assets/guides/workflow/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+Invoke large language models to answer questions or process natural language.
 
-Configuring an LLM node primarily involves two steps:
+<figure><img src="/en/.gitbook/assets/guides/workflow/node/llm/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>LLM Node</p></figcaption></figure>
 
-1. Selecting a model
-2. Composing system prompts
+***
 
-**Model Configuration**&#x20;
+### Scenarios
 
-Before selecting a model suitable for your task, you must complete the model configuration in "System Settings—Model Provider". The specific configuration method can be referenced in the [model configuration instructions](https://docs.dify.ai/tutorials/model-configuration#model-integration-settings). After selecting a model, you can configure its parameters.
+LLM is the core node of Chatflow/Workflow, utilizing the conversational/generative/classification/processing capabilities of large language models to handle a wide range of tasks based on given prompts and can be used in different stages of workflows.
 
-<figure><img src="/en/.gitbook/assets/guides/workflow/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+* **Intent Recognition**: In customer service scenarios, identifying and classifying user inquiries to guide downstream processes.
+* **Text Generation**: In content creation scenarios, generating relevant text based on themes and keywords.
+* **Content Classification**: In email batch processing scenarios, automatically categorizing emails, such as inquiries/complaints/spam.
+* **Text Conversion**: In translation scenarios, translating user-provided text into a specified language.
+* **Code Generation**: In programming assistance scenarios, generating specific business code or writing test cases based on user requirements.
+* **RAG**: In knowledge base Q&A scenarios, reorganizing retrieved relevant knowledge to respond to user questions.
+* **Image Understanding**: Using multimodal models with vision capabilities to understand and answer questions about the information within images.
 
-**Write Prompts**
+By selecting the appropriate model and writing prompts, you can build powerful and reliable solutions within Chatflow/Workflow.
 
-Within an LLM node, you can customize the model input prompts. If you choose a conversational model, you can customize the content of system prompts, user messages, and assistant messages.&#x20;
+***
 
-For instance, in a knowledge base Q\&A scenario, after linking the "Result" variable from the knowledge base retrieval node in "Context", inserting the "Context" special variable in the prompts will use the text retrieved from the knowledge base as the context background information for the model input.
+### How to Configure
 
-<figure><img src="/en/.gitbook/assets/guides/workflow/image (12) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/en/.gitbook/assets/guides/workflow/node/llm/image (200).png" alt=""><figcaption><p>LLM Node Configuration - Model Selection</p></figcaption></figure>
 
-In the prompt editor, you can bring up the variable insertion menu by typing "/" or "{" to insert special variable blocks or variables from preceding flow nodes into the prompts as context content.
+**Configuration Steps:**
 
-<figure><img src="/en/.gitbook/assets/guides/workflow/image (13) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+1. **Select a Model**: Dify supports major global models, including OpenAI's GPT series, Anthropic's Claude series, and Google's Gemini series. Choosing a model depends on its inference capability, cost, response speed, context window, etc. You need to select a suitable model based on the scenario requirements and task type.
+2. **Configure Model Parameters**: Model parameters control the generation results, such as temperature, TopP, maximum tokens, response format, etc. To facilitate selection, the system provides three preset parameter sets: Creative, Balanced, and Precise.
+3. **Write Prompts**: The LLM node offers an easy-to-use prompt composition page. Selecting a chat model or completion model will display different prompt composition structures.
+4. **Advanced Settings**: You can enable memory, set memory windows, and use the Jinja-2 template language for more complex prompts.
 
-If you opt for a completion model, the system provides preset prompt templates for conversational applications. You can customize the content of the prompts and insert special variable blocks like "Conversation History" and "Context" at appropriate positions by typing "/" or "{", enabling richer conversational functionalities.
+{% hint style="info" %}
+If you are using Dify for the first time, you need to complete the [model configuration](../../model-configuration/) in **System Settings—Model Providers** before selecting a model in the LLM node.
+{% endhint %}
 
-<figure><img src="/en/.gitbook/assets/guides/workflow/image (14) (1).png" alt=""><figcaption></figcaption></figure>
+#### **Writing Prompts**
 
-**Memory Toggle Settings**&#x20;
+In the LLM node, you can customize the model input prompts. If you select a chat model, you can customize the SYSTEM/User/ASSISTANT sections.
 
-In conversational applications (Chatflow), the LLM node defaults to enabling system memory settings. In multi-turn dialogues, the system stores historical dialogue messages and passes them into the model. In workflow applications (Workflow), system memory is turned off by default, and no memory setting options are provided.
+<figure><img src="/en/.gitbook/assets/guides/workflow/node/llm/image (203).png" alt="" width="352"><figcaption></figcaption></figure>
 
-**Memory Window Settings**&#x20;
+In the prompt editor, you can call out the **variable insertion menu** by typing **"/"** or **"{"** to insert **special variable blocks** or **upstream node variables** into the prompt as context content.
 
-If the memory window setting is off, the system dynamically passes historical dialogue messages according to the model's context window. With the memory window setting on, you can configure the number of historical dialogue messages to pass based on your needs.
+<figure><img src="/en/.gitbook/assets/guides/workflow/node/llm/image (202).png" alt="" width="366"><figcaption><p>Calling Out the Variable Insertion Menu</p></figcaption></figure>
 
-**Dialogue Role Name Settings**&#x20;
+***
 
-Due to differences in model training phases, different models adhere to role name commands to varying degrees, such as Human/Assistant, Human/AI, 人类/助手, etc. To adapt to the prompt response effects of multiple models, the system allows setting dialogue role names, modifying the role prefix in conversation history.
+### **Explanation of Special Variables**
+
+**Context Variables**
+
+Context variables are a special type of variable defined within the LLM node, used to insert externally retrieved text content into the prompt.
+
+<figure><img src="/en/.gitbook/assets/guides/workflow/node/llm/image (205).png" alt=""><figcaption><p>Context Variables</p></figcaption></figure>
+
+In common knowledge base Q&A applications, the downstream node of knowledge retrieval is typically the LLM node. The **output variable** `result` of knowledge retrieval needs to be configured in the **context variable** within the LLM node for association and assignment. After association, inserting the **context variable** at the appropriate position in the prompt can incorporate the externally retrieved knowledge into the prompt.
+
+This variable can be used not only as external knowledge introduced into the prompt context for LLM responses but also supports the application's [**citation and attribution**](../../knowledge-base/retrieval\_test\_and\_citation.md#id-2-yin-yong-yu-gui-shu) feature due to its data structure containing segment reference information.
+
+{% hint style="info" %}
+If the context variable is associated with a common variable from an upstream node, such as a string type variable from the start node, the context variable can still be used as external knowledge, but the **citation and attribution** feature will be disabled.
+{% endhint %}
+
+**Conversation History**
+
+To achieve conversational memory in text completion models (e.g., gpt-3.5-turbo-Instruct), Dify designed the conversation history variable in the original [Prompt Expert Mode (discontinued)](../../../learn-more/extended-reading/prompt-engineering/prompt-engineering-1/). This variable is carried over to the LLM node in Chatflow, used to insert chat history between the AI and the user into the prompt, helping the LLM understand the context of the conversation.
+
+{% hint style="info" %}
+The conversation history variable is not widely used and can only be inserted when selecting text completion models in Chatflow.
+{% endhint %}
+
+<figure><img src="/en/.gitbook/assets/guides/workflow/node/llm/image (204).png" alt=""><figcaption><p>Inserting Conversation History Variable</p></figcaption></figure>
+
+***
+
+### Advanced Features
+
+**Memory**: When enabled, each input to the intent classifier will include chat history from the conversation to help the LLM understand the context and improve question comprehension in interactive dialogues.
+
+**Memory Window**: When the memory window is closed, the system dynamically filters the amount of chat history passed based on the model's context window; when open, users can precisely control the amount of chat history passed (in terms of numbers).
+
+**Conversation Role Name Settings**: Due to differences in model training stages, different models adhere to role name instructions differently, such as Human/Assistant, Human/AI, Human/Assistant, etc. To adapt to the prompt response effects of multiple models, the system provides conversation role name settings. Modifying the role name will change the role prefix in the conversation history.
+
+**Jinja-2 Templates**: The LLM prompt editor supports Jinja-2 template language, allowing you to leverage this powerful Python template language for lightweight data transformation and logical processing. Refer to the [official documentation](https://jinja.palletsprojects.com/en/3.1.x/templates/).
+
+Scenario Example: **🚧**
